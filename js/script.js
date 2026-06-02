@@ -68,7 +68,7 @@ const flowers = [
         color: "Xanh,Hồng,Trắng",
         occasion: "Sinh nhật",
         image: "../assets/image/hoacamtucau/hoacamtucau.jpg",
-        folder: "camtu",
+        folder: "hoacamtucau",
         desc: "Thiết kế hiện đại, tone màu nhẹ nhàng."
 },
 
