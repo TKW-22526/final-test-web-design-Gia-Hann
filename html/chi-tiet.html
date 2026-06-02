@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Hoa</title>
+
+    <link rel="stylesheet" href="../css/chi-tiet.css">
+
+    <!-- ICON -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <a href="#" id="backBtn" class="back-home">
+        ← Quay lại cửa hàng
+    </a>
+
+    <section class="detail-page">
+
+        <!-- LEFT -->
+        <div id="detail"></div>
+
+        <!-- RIGHT -->
+
+    </section>
+
+    <!-- MOBILE ACTION -->
+
+    <div class="mobile-action">
+
+        <button class="mobile-call">
+            📞 Liên hệ
+        </button>
+
+        <button class="mobile-book">
+            Đặt hoa
+        </button>
+
+    </div>
+
+    <script>
+
+        const mainImg =
+        document.getElementById("mainImg");
+
+        const thumbs =
+        document.querySelectorAll(".thumb-list img");
+
+        thumbs.forEach(img => {
+
+            img.addEventListener("click", () => {
+
+                mainImg.src = img.src;
+
+                document
+                .querySelector(".active-thumb")
+                ?.classList.remove("active-thumb");
+
+                img.classList.add("active-thumb");
+
+            });
+
+        });
+
+    </script>
+
+    <script src="../js/script.js"></script>
+
+    <script>
+
+        const params =
+        new URLSearchParams(window.location.search);
+
+        const from = params.get("from");
+
+        const backBtn =
+        document.getElementById("backBtn");
+
+        if(from === "index"){
+
+            backBtn.href = "../index.html";
+
+        }else{
+
+            backBtn.href = "san-pham.html";
+
+        }
+
+    </script>
+
+</body>
+</html>
