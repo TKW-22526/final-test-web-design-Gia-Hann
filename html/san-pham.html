@@ -1,126 +1,91 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-    content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Danh Sách Hoa</title>
 
-    <link rel="stylesheet"
-    href="../css/san-pham.css">
+    <link rel="stylesheet" href="../css/san-pham.css">
 
-    <!-- ICON -->
-
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-
 <body>
 
-    <!-- PRODUCT -->
+<!-- HEADER -->
+ <div class="header-mini">
 
-    <section class="flowers">
-
-        <!-- TOP -->
-
-        <div class="top-bar">
-
-            <div class="title-box">
-
-                <h2>
-                    Bộ Sưu Tập Hoa Tươi
-                </h2>
-
-                <p>
-                    Những mẫu hoa hiện đại,
-                    tinh tế và sang trọng
-                </p>
-
-            </div>
-
-            <div class="result-box">
-
-                <i class="fa-solid fa-seedling"></i>
-
-                <span>
-                    50+ mẫu hoa
-                </span>
-
-            </div>
-
-        </div>
-
-       <div class="menu-filter">
-
-    <button class="active">Tất Cả</button>
-    <button>Hoa Sinh Nhật</button>
-    <button>Hoa Khai Trương</button>
-    <button>Hoa Cưới</button>
-
-        </div> 
-
-    <div id="flower-container" class="flower-container">
+    <!-- LEFT: HOME + CART -->
+    <div class="header-left">
+        <a href="../index.html">🏠 Trang chủ</a>
+        <a href="gio-hang.html" class="cart">
+            <span class="cart-icon">🧺</span> 
+        <span class="cart-count">0</span>
+        </a>
     </div>
-        <!-- SERVICE -->
 
-        <div class="service-box">
+    <!-- CENTER: SEARCH -->
+    <input 
+        type="text"
+        id="search"
+        placeholder="Tìm kiếm sản phẩm..."
+        class="search-box"
+    >
 
-            <div class="service-item">
+</div>
+<!-- PRODUCT -->
+<section class="flowers">
 
-                <i class="fa-solid fa-truck-fast"></i>
+    <!-- TOP -->
+    <div class="top-bar">
 
-                <h3>
-                    Giao Hoa Nhanh
-                </h3>
-
-                <p>
-                    Hỗ trợ giao hoa tận nơi
-                    trong ngày.
-                </p>
-
-            </div>
-
-            <div class="service-item">
-
-                <i class="fa-solid fa-heart"></i>
-
-                <h3>
-                    Thiết Kế Tinh Tế
-                </h3>
-
-                <p>
-                    Mẫu hoa hiện đại,
-                    phù hợp mọi dịp đặc biệt.
-                </p>
-
-            </div>
-
-            <div class="service-item">
-
-                <i class="fa-solid fa-gift"></i>
-
-                <h3>
-                    Gói Quà Miễn Phí
-                </h3>
-
-                <p>
-                    Tặng thiệp và trang trí
-                    theo yêu cầu.
-                </p>
-
-            </div>
-
+        <div class="title-box">
+            <h2>Bộ Sưu Tập Hoa Tươi</h2>
+            <p>Những mẫu hoa hiện đại, tinh tế và sang trọng</p>
         </div>
 
-        <!-- SCRIPT -->
+        <div class="result-box">
+            <i class="fa-solid fa-seedling"></i>
+            <span>50+ mẫu hoa</span>
+        </div>
 
-        <script src="../js/script.js"></script>
+    </div>
 
-    </section>
+    <!-- FILTER -->
+    <div class="menu-filter">
+        <button class="active">Tất Cả Hoa Ở Đây</button>
+       
+    </div>
+
+    <!-- FLOWER LIST -->
+    <div id="flower-container" class="flower-container"></div>
+
+    <!-- SERVICE -->
+    <div class="service-box">
+
+        <div class="service-item">
+            <i class="fa-solid fa-truck-fast"></i>
+            <h3>Giao Hoa Nhanh</h3>
+            <p>Giao tận nơi trong ngày</p>
+        </div>
+
+        <div class="service-item">
+            <i class="fa-solid fa-heart"></i>
+            <h3>Thiết Kế Tinh Tế</h3>
+            <p>Phong cách hiện đại</p>
+        </div>
+
+        <div class="service-item">
+            <i class="fa-solid fa-gift"></i>
+            <h3>Gói Quà Miễn Phí</h3>
+            <p>Tặng thiệp + trang trí</p>
+        </div>
+
+    </div>
+
+</section>
+
+<script src="../js/script.js"></script>
 
 </body>
 </html>

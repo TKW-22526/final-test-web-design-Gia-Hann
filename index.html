@@ -1,359 +1,234 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-    content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>YaHan Flower Shop</title>
 
-    <link rel="stylesheet"
-    href="css/index.css">
-
-    <!-- ICON -->
-
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
 
 </head>
 
 <body>
 
-    <!-- HEADER -->
+<!-- ================= HEADER ================= -->
+<header class="header">
 
-    <header class="header">
+    <div class="logo">
+        <img src="assets/image/logo.png" alt="YaHan">
+        <h2>YaHan</h2>
+    </div>
 
-        <div class="logo">
+    <nav class="menu">
 
-            <img src="assets/image/logo.png"
-            alt="Flower Shop">
+    <a href="index.html">
+        Trang Chủ
+    </a>
 
-            <h2>
-                YaHan
-            </h2>
+    <a href="html/san-pham.html">
+        Bộ Sưu Tập
+    </a>
 
-        </div>
+    <a href="html/gioi-thieu.html">
+        Giới Thiệu
+    </a>
 
-        <!-- MENU -->
+    <a href="html/lien-he.html">
+        Liên Hệ
+    </a>
 
-        <nav class="menu">
+</nav>
 
-            <a href="index.html">
-                Trang Chủ
-            </a>
+    <div class="header-right">
+       <a href="html/gio-hang.html" class="cart">
+        <span class="cart-icon">🧺</span>
+        <span class="cart-count">0</span>
+</a>
 
-            <a href="html/san-pham.html">
-                Bộ Sưu Tập Hoa
-            </a>
-
-            <a href="html/gioi-thieu.html">
-                Giới Thiệu
-            </a>
-
-            <a href="html/lien-he.html">
-                Liên Hệ
-            </a>
-
-        </nav>
-
-        <!-- BUTTON -->
-
-        <a href="html/lien-he.html"
-        class="order-btn">
-
-            Đặt Hoa Ngay
-
+        <a href="html/lien-he.html" class="cta-btn">
+            Đặt Hoa
         </a>
+    </div>
 
-    </header>
+</header>
 
-    <!-- BANNER -->
 
-    <section class="banner">
+<!-- ================= HERO (SPLIT LAYOUT) ================= -->
+<section class="hero">
 
-        <div class="overlay">
+    <div class="hero-text">
+        <span class="tag">YaHan Flower Shop</span>
 
-            <span>
-                YaHan Flower Shop
-            </span>
-
-            <h1>
-                Những Bó Hoa Tươi Đầy Yêu Thương
-            </h1>
-
-            <p>
-                Hoa tươi hiện đại,
-                tinh tế và phù hợp
-                cho mọi dịp đặc biệt
-            </p>
-
-            <div class="banner-btn">
-
-                <a href="html/san-pham.html">
-
-                    Xem Bộ Sưu Tập
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- FEATURE -->
-
-    <section class="feature">
-
-        <div class="feature-box">
-
-            <div class="feature-item">
-
-                <i class="fa-solid fa-seedling"></i>
-
-                <h3>
-                    Hoa Tươi Mỗi Ngày
-                </h3>
-
-            </div>
-
-            <div class="feature-item">
-
-                <i class="fa-solid fa-truck-fast"></i>
-
-                <h3>
-                    Giao Hàng Nhanh
-                </h3>
-
-            </div>
-
-            <div class="feature-item">
-
-                <i class="fa-solid fa-gift"></i>
-
-                <h3>
-                    Gói Quà Miễn Phí
-                </h3>
-
-            </div>
-
-            <div class="feature-item">
-
-                <i class="fa-solid fa-heart"></i>
-
-                <h3>
-                    Thiết Kế Tinh Tế
-                </h3>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- FLOWERS -->
-
-    <section class="flowers">
-
-        <div class="section-title">
-
-            <span>
-                Bộ Sưu Tập
-            </span>
-
-            <h2>
-                Những Mẫu Hoa Nổi Bật
-            </h2>
-
-        </div>
-
-        <div class="flower-container">
-
-            <!-- CARD 1 -->
-
-            <div class="flower-card">
-
-                <img src="assets/image/hoahong/hoahong.jpg"
-                alt="Hoa hồng">
-
-                <div class="flower-info">
-
-                    <h3>
-                        Bó Hoa Hồng Đỏ
-                    </h3>
-
-                    <p class="price">
-                        900.000đ
-                    </p>
-
-                    <p>
-                        Sang trọng • Hiện đại • Tinh tế
-                    </p>
-
-                    <a href="html/chi-tiet.html?id=1&from=index"
-                    class="detail-btn">
-
-                        Xem Chi Tiết
-
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- CARD 2 -->
-
-            <div class="flower-card">
-
-                <img src="assets/image/hoatulip/hoatulip.jpg"
-                alt="Hoa tulip">
-
-                <div class="flower-info">
-
-                    <h3>
-                        Hoa Tulip Premium
-                    </h3>
-
-                    <p class="price">
-                        750.000đ
-                    </p>
-
-                    <p>
-                        Tươi mới • Nhẹ nhàng • Thanh lịch
-                    </p>
-
-                    <a href="html/chi-tiet.html?id=2&from=index"
-                    class="detail-btn">
-
-                        Xem Chi Tiết
-
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- CARD 3 -->
-
-            <div class="flower-card">
-
-                <img src="assets/image/hoahuongduong/hoahuongduong.jpg"
-                alt="Hoa Hướng Dương">
-
-                <div class="flower-info">
-
-                    <h3>
-                        Hoa Hướng Dương
-                    </h3>
-
-                    <p class="price">
-                        700.000đ
-                    </p>
-
-                    <p>
-                        Hướng nắng • Niềm tin • Sức sống
-                    </p>
-
-                    <a href="html/chi-tiet.html?id=3&from=index"
-                    class="detail-btn">
-
-                        Xem Chi Tiết
-
-                    </a>
-
-                </div>
-
-            </div>
-
-             <!-- CARD 4 -->
-
-            <div class="flower-card">
-
-                <img src="assets/image/hoasen/hoasen.jpg"
-                alt="Hoa Sen">
-
-                <div class="flower-info">
-
-                    <h3>
-                        Hoa Sen
-                    </h3>
-
-                    <p class="price">
-                        650.000đ
-                    </p>
-
-                    <p>
-                        Tinh tế • Dịu dàng • Thanh tao
-                    </p>
-
-                    <a href="html/chi-tiet.html?id=3=4&from=index"
-                    class="detail-btn">
-
-                        Xem Chi Tiết
-
-                    </a>
-        
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- ABOUT -->
-
-    <section class="about-home">
-
-        <div class="about-content">
-
-            <div class="about-text">
-
-                <span>
-                    YaHan Flower
-                </span>
-
-                <h2>
-                    Không Chỉ Là Hoa,
-                    Mà Là Cảm Xúc
-                </h2>
-
-                <p>
-                    Chúng tôi luôn mong muốn
-                    mang đến những bó hoa đẹp nhất,
-                    giúp bạn gửi gắm yêu thương
-                    đến những người quan trọng.
-                </p>
-
-                <a href="html/gioi-thieu.html">
-
-                    Khám Phá Thêm
-
-                </a>
-
-            </div>
-
-            <div class="about-image">
-
-                <img src="assets/image/nen2.jpg"
-                alt="Flower">
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- FOOTER -->
-
-    <footer class="footer">
+        <h1>Gửi Yêu Thương Qua Những Bó Hoa Tươi</h1>
 
         <p>
-            © 2026 YaHan Flower Shop.
+            Hoa tươi cao cấp, thiết kế tinh tế cho mọi khoảnh khắc đáng nhớ.
         </p>
 
-    </footer>
+        <div class="hero-btn">
+            <a href="html/san-pham.html">Xem Bộ Sưu Tập</a>
+            <a href="html/gioi-thieu.html" class="outline">Khám Phá</a>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <img src="assets/image/nen2.jpg" alt="Flower Hero">
+    </div>
+
+</section>
+
+
+<!-- ================= CATEGORY QUICK ================= -->
+<section class="category">
+
+    <h2>Danh Mục Hoa</h2>
+
+    <div class="category-list">
+
+        <div class="category-item">🌹 Hoa Hồng</div>
+        <div class="category-item">🌷 Tulip</div>
+        <div class="category-item">🌻 Hướng Dương</div>
+        <div class="category-item">🌸 Hoa Sen</div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURE ================= -->
+<section class="feature">
+
+    <div class="feature-item">
+        <i class="fa-solid fa-seedling"></i>
+        <h3>Hoa Tươi Mỗi Ngày</h3>
+    </div>
+
+    <div class="feature-item">
+        <i class="fa-solid fa-truck-fast"></i>
+        <h3>Giao Hàng Nhanh</h3>
+    </div>
+
+    <div class="feature-item">
+        <i class="fa-solid fa-gift"></i>
+        <h3>Gói Quà Miễn Phí</h3>
+    </div>
+
+    <div class="feature-item">
+        <i class="fa-solid fa-heart"></i>
+        <h3>Thiết Kế Tinh Tế</h3>
+    </div>
+
+</section>
+
+
+<!-- ================= PRODUCTS ================= -->
+<section class="products">
+
+    <div class="section-title">
+        <span>Bộ Sưu Tập</span>
+        <h2>Sản Phẩm Nổi Bật</h2>
+    </div>
+
+    <div class="product-grid">
+
+        <!-- CARD 1 -->
+        <div class="product-card">
+            <img src="assets/image/hoahong/hoahong.jpg">
+
+            <div class="product-info">
+                <h3>Hoa Hồng Đỏ</h3>
+                <p class="price">900.000đ</p>
+
+                <button onclick="addToCart(1,'Hoa Hồng Đỏ',900000,'assets/image/hoahong/hoahong.jpg')">
+                    Thêm vào giỏ
+                </button>
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="product-card">
+            <img src="assets/image/hoatulip/hoatulip.jpg">
+
+            <div class="product-info">
+                <h3>Hoa Tulip</h3>
+                <p class="price">750.000đ</p>
+
+                <button onclick="addToCart(2,'Hoa Tulip',750000,'assets/image/hoatulip/hoatulip.jpg')">
+                    Thêm vào giỏ
+                </button>
+            </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="product-card">
+            <img src="assets/image/hoahuongduong/hoahuongduong.jpg">
+
+            <div class="product-info">
+                <h3>Hoa Hướng Dương</h3>
+                <p class="price">700.000đ</p>
+
+                <button onclick="addToCart(3,'Hoa Hướng Dương',700000,'assets/image/hoahuongduong/hoahuongduong.jpg')">
+                    Thêm vào giỏ
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+<section class="about">
+
+    <div class="about-image">
+        <img src="assets/image/nen3.jpg">
+    </div>
+
+    <div class="about-text">
+        <h2>Không Chỉ Là Hoa</h2>
+        <p>
+            YaHan Flower Shop mang đến những bó hoa mang cảm xúc,
+            giúp bạn gửi gắm yêu thương đến người quan trọng.
+        </p>
+
+        <a href="html/gioi-thieu.html">Tìm Hiểu Thêm</a>
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+<section class="cta">
+
+    <h2>Đặt Hoa Ngay Hôm Nay</h2>
+    <p>Giao nhanh – Thiết kế đẹp – Giá hợp lý</p>
+
+    <a href="html/san-pham.html">Mua Ngay</a>
+
+</section>
+
+
+<!-- ================= JS ================= -->
+<script src="js/cart.js"></script>
+<script src="js/script.js"></script>
+
+<div class="toast" id="toast">
+
+    <div class="toast-icon">
+        ✓
+    </div>
+
+    <div class="toast-content">
+
+        <h4>Đã thêm vào giỏ</h4>
+
+        <p>Sản phẩm đã được thêm thành công</p>
+
+    </div>
+
+</div>
 
 </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Giỏ hàng</title>
+
+    <link rel="stylesheet" href="../css/gio-hang.css">
+
+</head>
+
+<body>
+
+    <div class="cart-page">
+
+        <h1>🛒 Giỏ hàng</h1>
+
+        <a href="../index.html" class="back">
+            ⬅ Quay lại
+        </a>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Sản phẩm</th>
+
+                    <th>Giá</th>
+
+                    <th>Số lượng</th>
+
+                    <th>Tổng</th>
+
+                    <th>Xóa</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="cart-body">
+
+            </tbody>
+
+        </table>
+
+        <div class="total-box">
+
+            <h2 id="total">
+                Tổng tiền: 0đ
+            </h2>
+
+            <button onclick="checkout()">
+                Thanh toán
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="../js/cart.js"></script>
+
+</body>
+
+</html>
