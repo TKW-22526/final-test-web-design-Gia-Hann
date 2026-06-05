@@ -69,32 +69,48 @@ body{
 
     align-items:center;
 
-    gap:8px;
+    gap:10px;
 
     text-decoration:none;
 
-    background:#ffe1ea;
-
-    color:#ff4d88;
-
-    padding:12px 20px;
+    padding:14px 24px;
 
     border-radius:50px;
 
+    background:
+    linear-gradient(
+        135deg,
+        #ffd6e5,
+        #ffe9f1
+    );
+
+    color:#ff4d88;
+
+    font-size:16px;
+
     font-weight:600;
 
-    transition:0.3s;
+    box-shadow:
+    0 8px 18px rgba(255,77,136,0.15);
+
+    transition:0.3s ease;
 }
 
 .back-btn:hover{
-    background:#ff4d88;
+    background:
+    linear-gradient(
+        135deg,
+        #ff4d88,
+        #ff76a6
+    );
 
     color:white;
 
-    transform:translateY(-2px);
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 12px 24px rgba(255,77,136,0.28);
 }
-
-
 
 /* =========================
    TABLE
