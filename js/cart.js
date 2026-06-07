@@ -1,12 +1,91 @@
+// =======================
+// CART
+// =======================
+
 let cart =
 JSON.parse(localStorage.getItem("cart")) || [];
 
 
+// =======================
+// ADD TO CART
+// =======================
+
+function addToCart(id, name, price){
+
+    const cleanPrice = Number(
+        price.replace(/\./g, "")
+             .replace("đ", "")
+    );
+
+    let item =
+    cart.find(p => p.id === id);
+
+    if(item){
+
+        item.qty += 1;
+
+    }else{
+
+        cart.push({
+            id: id,
+            name: name,
+            price: cleanPrice,
+            qty: 1
+        });
+    }
+
+    saveCart();
+
+    updateCartCount();
+
+    showToast();
+}
+
+
+// =======================
+// SAVE CART
+// =======================
+
+function saveCart(){
+
+    localStorage.setItem(
+        "cart",
+        JSON.stringify(cart)
+    );
+}
+
+
+// =======================
+// UPDATE COUNT
+// =======================
+
+function updateCartCount(){
+
+    const count =
+    document.querySelector(".cart-count");
+
+    if(!count) return;
+
+    let total = 0;
+
+    cart.forEach(item => {
+        total += item.qty;
+    });
+
+    count.innerText = total;
+}
+
+
+// =======================
+// RENDER CART
+// =======================
 
 function renderCart(){
 
     const body =
     document.getElementById("cart-body");
+
+    if(!body) return;
 
     body.innerHTML = "";
 
@@ -15,20 +94,19 @@ function renderCart(){
 
     if(cart.length === 0){
 
-    body.innerHTML = `
-        <tr>
-            <td colspan="5">
-                Giỏ hàng đang trống 🛒
-            </td>
-        </tr>
-    `;
+        body.innerHTML = `
+            <tr>
+                <td colspan="5">
+                    Giỏ hàng đang trống 🛒
+                </td>
+            </tr>
+        `;
 
-    document.getElementById("total")
-    .innerText = "Tổng tiền: 0đ";
+        document.getElementById("total")
+        .innerText = "Tổng tiền: 0đ";
 
-    return;
-}
-
+        return;
+    }
 
 
     cart.forEach(item => {
@@ -50,15 +128,13 @@ function renderCart(){
 
             <td>
 
-                <button
-                onclick="changeQty(${item.id},-1)">
+                <button onclick="changeQty(${item.id},-1)">
                     -
                 </button>
 
                 ${item.qty}
 
-                <button
-                onclick="changeQty(${item.id},1)">
+                <button onclick="changeQty(${item.id},1)">
                     +
                 </button>
 
@@ -70,31 +146,26 @@ function renderCart(){
 
             <td>
 
-                <button
-                onclick="removeItem(${item.id})">
-
+                <button onclick="removeItem(${item.id})">
                     X
-
                 </button>
 
             </td>
 
         </tr>
-
         `;
     });
 
-
-
-
     document.getElementById("total")
     .innerText =
-
     "Tổng tiền: " +
     total.toLocaleString() + "đ";
 }
 
 
+// =======================
+// CHANGE QTY
+// =======================
 
 function changeQty(id,value){
 
@@ -112,9 +183,14 @@ function changeQty(id,value){
     saveCart();
 
     renderCart();
+
+    updateCartCount();
 }
 
 
+// =======================
+// REMOVE ITEM
+// =======================
 
 function removeItem(id){
 
@@ -124,19 +200,14 @@ function removeItem(id){
     saveCart();
 
     renderCart();
+
+    updateCartCount();
 }
 
 
-
-function saveCart(){
-
-    localStorage.setItem(
-        "cart",
-        JSON.stringify(cart)
-    );
-}
-
-
+// =======================
+// CHECKOUT
+// =======================
 
 function checkout(){
 
@@ -154,8 +225,39 @@ function checkout(){
     saveCart();
 
     renderCart();
+
+    updateCartCount();
 }
 
 
+// =======================
+// TOAST
+// =======================
+
+function showToast(){
+
+    const toast =
+    document.getElementById("toast");
+
+    if(!toast) return;
+
+    toast.innerText =
+    "Đã thêm vào giỏ hàng 💖";
+
+    toast.classList.add("show");
+
+    setTimeout(() => {
+
+        toast.classList.remove("show");
+
+    },2000);
+}
+
+
+// =======================
+// RUN
+// =======================
+
+updateCartCount();
 
 renderCart();

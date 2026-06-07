@@ -275,12 +275,10 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 // thêm vào giỏ hàng
 function addToCart(id, name, price) {
 
-    // chuyển giá về number
     const cleanPrice = Number(
         price.replace(/\./g, "").replace("đ", "")
     );
 
-    // tìm sản phẩm tồn tại
     let item = cart.find(p => p.id === id);
 
     if (item) {
@@ -297,16 +295,13 @@ function addToCart(id, name, price) {
         });
     }
 
-    // lưu localStorage
     localStorage.setItem(
         "cart",
         JSON.stringify(cart)
     );
 
-    // cập nhật số lượng
     updateCartCount();
 
-    // hiện thông báo đẹp
     showToast();
 }
 
@@ -330,17 +325,17 @@ function updateCartCount() {
 // TOAST
 // =======================
 
-function showToast(){
+function showToast(message = "Đã thêm vào giỏ hàng 💖"){
 
-    const toast =
-    document.getElementById("toast");
+    const toast = document.getElementById("toast");
 
+    if (!toast) return;
+
+    toast.innerText = message;
     toast.classList.add("show");
 
     setTimeout(() => {
-
         toast.classList.remove("show");
-
     }, 2500);
 }
 
